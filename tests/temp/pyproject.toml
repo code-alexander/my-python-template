@@ -1,0 +1,10 @@
+[project]
+name = "test-project"
+version = "0.1.0"
+description = "`Test Project` is a Python package 🚀"
+readme = "README.md"
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
