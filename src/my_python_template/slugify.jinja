@@ -1,0 +1,4 @@
+{# For simplicity ... -#}
+{% macro slugify(value, separator) -%}
+{{ value|lower|replace(' ', separator)|replace('-', separator)|replace('_', separator) }}
+{%- endmacro %}

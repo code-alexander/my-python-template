@@ -1,0 +1,22 @@
+_exclude:
+    - copier.yaml
+    - slugify
+
+project_name:
+    type: str
+    help: Project name
+
+distribution_name:
+    type: str
+    help: Python distribution package (used for `pip install`)
+    default: "{% from 'slugify.jinja' import slugify %}{{ slugify(project_name, '-') }}"
+
+import_name:
+    type: str
+    help: Python import package name (used for `import`)
+    default: "{% from 'slugify.jinja' import slugify %}{{ slugify(project_name, '_') }}"
+
+project_description:
+    type: str
+    help: Project description
+    default: "`{{ project_name }}` is a Python package 🚀"
