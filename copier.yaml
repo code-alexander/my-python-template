@@ -1,8 +1,5 @@
 _subdirectory: src/my_python_template
 
-_exclude:
-    - slugify.jinja
-
 project_name:
     type: str
     help: Project name
