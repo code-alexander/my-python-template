@@ -6,6 +6,7 @@ on:
   pull_request:
   workflow_dispatch:
 
+jobs:
   lint:
     name: python
     runs-on: ubuntu-latest
@@ -24,16 +25,16 @@ on:
         run: uv sync --all-extras --dev
 
       - name: Python format
-        run: uvx ruff format --diff .
+        run: uv run ruff format --diff .
 
       - name: Python lint
-        run: uvx ruff check .
+        run: uv run ruff check .
 
       - name: "Validate project metadata"
         run: uvx --from 'validate-pyproject[all,store]' validate-pyproject pyproject.toml
 
       - name: Python type check
-        run: uvx mypy
+        run: uv run mypy
 
       - name: Run Python tests
         run: uv run pytest tests --cov=src --cov-report=html
