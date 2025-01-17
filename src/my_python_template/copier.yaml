@@ -1,3 +1,5 @@
+_subdirectory: src/my_python_template
+
 _exclude:
     - copier.yaml
     - slugify.jinja
