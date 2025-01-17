@@ -8,4 +8,4 @@ def delete_temp_dir():
     shutil.rmtree("tests/temp/", ignore_errors=True)
     yield
     print("Deleting `tests/temp/`")
-    # shutil.rmtree("tests/temp/", ignore_errors=True)
+    shutil.rmtree("tests/temp/", ignore_errors=True)

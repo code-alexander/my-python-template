@@ -4,13 +4,17 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "copier>=9.4.1",
-    "pytest>=8.3.4",
-    "pre-commit>=4.0.1",
-    "pytest-cov>=6.0.0",
-]
+dependencies = []
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "copier>=9.4.1",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "pre-commit>=4.0.1",
+    "mypy>=1.14.1",
+]
