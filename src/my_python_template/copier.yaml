@@ -1,6 +1,6 @@
 _exclude:
     - copier.yaml
-    - slugify
+    - slugify.jinja
 
 project_name:
     type: str
