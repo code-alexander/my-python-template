@@ -1,7 +1,7 @@
 _subdirectory: src/my_python_template
 
 _exclude:
-    - __init__.py
+    - src/my_python_template/__init__.py
 
 project_name:
     type: str
