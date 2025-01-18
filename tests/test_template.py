@@ -15,7 +15,7 @@ def test_folders(delete_temp_dir: Generator[None, None, None]) -> None:
             before and after a test.
     """
     copier.run_copy(
-        src_path='src/my_python_template/',
+        src_path='.',
         dst_path='tests/temp/',
         data={
             'project_name': 'Test Project',
@@ -31,3 +31,4 @@ def test_folders(delete_temp_dir: Generator[None, None, None]) -> None:
     assert Path('tests/temp/README.md').is_file(), '`README.md` file not found'
     assert Path('tests/temp/pyproject.toml').is_file(), '`pyproject.toml` file not found'
     assert Path('tests/temp/.copier-answers.yml').is_file(), '`.copier-answers.yml` file not found'
+    assert not Path('tests/temp/__init__.py').exists(), '`__init__.py` file should not be copied to the root dir'
