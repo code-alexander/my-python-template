@@ -15,4 +15,4 @@ def delete_temp_dir() -> Generator[None, None, None]:
     """
     shutil.rmtree('tests/temp/', ignore_errors=True)
     yield None
-    shutil.rmtree('tests/temp/', ignore_errors=True)
+    # shutil.rmtree('tests/temp/', ignore_errors=True)
