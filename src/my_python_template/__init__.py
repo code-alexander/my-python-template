@@ -1,1 +1,1 @@
-"""Tests for `my-python-template`."""
+"""`my-python-template` package."""
