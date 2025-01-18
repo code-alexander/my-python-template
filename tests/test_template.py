@@ -30,3 +30,4 @@ def test_folders(delete_temp_dir: Generator[None, None, None]) -> None:
     assert Path('tests/temp/.pre-commit-config.yaml').is_file(), '`.pre-commit-config.yaml` file not found'
     assert Path('tests/temp/README.md').is_file(), '`README.md` file not found'
     assert Path('tests/temp/pyproject.toml').is_file(), '`pyproject.toml` file not found'
+    assert Path('tests/temp/.copier-answers.yml').is_file(), '`.copier-answers.yml` file not found'
