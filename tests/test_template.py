@@ -25,6 +25,7 @@ def test_folders(delete_temp_dir: Generator[None, None, None]) -> None:
         },
     )
     assert Path('tests/temp/src/test_project/__init__.py').is_file(), '`src/test_project/__init__.py` file not found'
+    assert Path('tests/temp/src/test_project/py.typed').is_file(), '`src/test_project/py.typed` PEP-561 file not found'
     assert Path('tests/temp/tests').is_dir(), '`tests` folder not found'
     assert Path('tests/temp/.github/workflows/ci.yaml').is_file(), '`.github/workflows/ci.yaml` file not found'
     assert Path('tests/temp/.pre-commit-config.yaml').is_file(), '`.pre-commit-config.yaml` file not found'
